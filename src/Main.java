@@ -3,46 +3,20 @@
 public class Main {
     public static void main(String[] args) {
         System.out.println("Task1");
-        int[] f = {300, 600, 900, 1200, 1500};
-        int total = 0;
-        for (int value : f) {
-            total += value;
-        }
-        System.out.println("Сумма трат за месяц составила" + total + "рубли");
-
-
+        String firstName = "Ivan";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov";
+        String fullName = "Ivanov Ivan Ivanovich";
+        System.out.println(lastName+" "+firstName+" "+middleName+" "+"Ф.И.О. сотрудника");
 
         System.out.println("Task2");
-        int[] f1 = {300, 600, 900, 1200, 1500};
-        int min = f1[0];
-        int max = f1[0];
-        for (int value : f1) {
-            if (value < min) {
-                min = value;
-            }
-            if (value > max) {
-                max = value;
-
-            }
-        }
-        System.out.println("Минимальная сумма трат за день составила" + min + "рублей");
-        System.out.println("Максимальная сумма трат за день составила" + max + "рублей");
-
+        String fullName1 = "Ivanov Ivan Ivanovich";
+        System.out.println("Данные Ф. И. О. сотрудника для заполнения отчета —"+ fullName1.toUpperCase());
         System.out.println("Task3");
-        int[] f2 = {300, 600, 900, 1200, 1500};
-        int total1 = 0;
-        for (int value1 : f2) {
-            total1 += value1;
-        }
-        double average = total1 / f2.length;
-        System.out.println("Сумма трат  за день составила"+average+"рублей");
+        String fullName3 = "Иванов Семён Семёнович";
+        String fullName4 = fullName3.replace('ё', 'е');
+        System.out.println("Данные Ф. И. О. сотрудника —"+fullName4);
 
-        System.out.println("Task4");
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1;i>=0 ; i--) {
-            System.out.print(reverseFullName[i]);
 
-        }
-
-        }
     }
+}
