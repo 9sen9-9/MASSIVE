@@ -11,8 +11,7 @@ public class Main {
         System.out.println("Сумма трат за месяц составила" + total + "рубли");
 
 
-
-        System.out.println("Task2");
+        System.out.println("Tsk2");
         int[] f1 = {300, 600, 900, 1200, 1500};
         int min = f1[0];
         int max = f1[0];
@@ -35,14 +34,14 @@ public class Main {
             total1 += value1;
         }
         double average = total1 / f2.length;
-        System.out.println("Сумма трат  за день составила"+average+"рублей");
+        System.out.println("Сумма трат  за день составила" + average + "рублей");
 
         System.out.println("Task4");
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1;i>=0 ; i--) {
+        char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
+        for (int i = reverseFullName.length - 1; i >= 0; i--) {
             System.out.print(reverseFullName[i]);
 
         }
 
-        }
     }
+}
