@@ -33,8 +33,9 @@ public class Main {
         for (int value1 : f2) {
             total1 += value1;
         }
-        double average = total1 / f2.length;
-        System.out.println("Сумма трат  за день составила" + average + "рублей");
+        int a = f2.length;
+        double average = total1 / a;
+        System.out.println("Средняя Сумма трат  за месяц составила" + average + "рублей");
 
         System.out.println("Task4");
         char[] reverseFullName = {'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
