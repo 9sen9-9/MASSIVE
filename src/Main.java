@@ -1,48 +1,64 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
+import java.time.LocalDate;//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Task1");
-        int[] f = {300, 600, 900, 1200, 1500};
-        int total = 0;
-        for (int value : f) {
-            total += value;
-        }
-        System.out.println("Сумма трат за месяц составила" + total + "рубли");
+public static void main(String[] args) {
+
+    printIsLeapYear(2024);
+}
 
 
+        public static void printIsLeapYear(int year) {
+            if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                System.out.println(year + "год високосный");
+            } else {
+                System.out.println(year + "год не високсный");
 
-        System.out.println("Task2");
-        int[] f1 = {300, 600, 900, 1200, 1500};
-        int min = f1[0];
-        int max = f1[0];
-        for (int value : f1) {
-            if (value < min) {
-                min = value;
-            }
-            if (value > max) {
-                max = value;
 
             }
         }
-        System.out.println("Минимальная сумма трат за день составила" + min + "рублей");
-        System.out.println("Максимальная сумма трат за день составила" + max + "рублей");
 
-        System.out.println("Task3");
-        int[] f2 = {300, 600, 900, 1200, 1500};
-        int total1 = 0;
-        for (int value1 : f2) {
-            total1 += value1;
+        public static void printRecommendedAppVersion ( int deviceType, int deviceYear){
+            int currentYear = LocalDate.now().getYear();
+            if (deviceYear < currentYear) {
+                if (deviceType == 0) {
+                    System.out.println("Установите облегченную версию для Ios");
+                } else {
+                    System.out.println("Установите облегченную версию для Android");
+                }
+            } else {
+                if (deviceType == 0) {
+                    System.out.println("Установите версию для IOS");
+                } else {
+                    System.out.println("Установите версию для Android");
+
+                }
+
+            }
         }
-        double average = total1 / f2.length;
-        System.out.println("Сумма трат  за день составила"+average+"рублей");
 
-        System.out.println("Task4");
-        char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
-        for (int i = reverseFullName.length-1;i>=0 ; i--) {
-            System.out.print(reverseFullName[i]);
-
+        public static int calculateDeliveryDays ( int distance){
+            if (distance < 20) {
+                return 1;
+            } else if (distance < 60) {
+                return 2;
+            } else if (distance < 100) {
+                return 3;
+            }
+            return -1;
+        }
+        public static void printDeliveryDays ( int days){
+            if (days >= 0) {
+                System.out.println("Доставка займет" + days + "дней");
+            } else {
+                System.out.println("Доставки нет");
+            }
         }
 
-        }
-    }
+
+
+
+
+
+
+
+
+
