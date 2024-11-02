@@ -3,6 +3,10 @@ import java.time.LocalDate;//TIP To <b>Run</b> code, press <shortcut actionId="R
 public static void main(String[] args) {
 
     printIsLeapYear(2024);
+    printRecommendedAppVersion(0,2023);
+   int days = calculateDeliveryDays(50);
+   printDeliveryDays(days);
+
 }
 
 
@@ -16,42 +20,43 @@ public static void main(String[] args) {
             }
         }
 
-        public static void printRecommendedAppVersion ( int deviceType, int deviceYear){
-            int currentYear = LocalDate.now().getYear();
-            if (deviceYear < currentYear) {
-                if (deviceType == 0) {
-                    System.out.println("Установите облегченную версию для Ios");
+            public static void printRecommendedAppVersion ( int deviceType, int deviceYear){
+                int currentYear = LocalDate.now().getYear();
+                if (deviceYear < currentYear) {
+                    if (deviceType == 0) {
+                        System.out.println("Установите облегченную версию для Ios");
+                    } else {
+                        System.out.println("Установите облегченную версию для Android");
+                    }
                 } else {
-                    System.out.println("Установите облегченную версию для Android");
+                    if (deviceType == 0) {
+                        System.out.println("Установите версию для IOS");
+                    } else {
+                        System.out.println("Установите версию для Android");
+
+                    }
+
                 }
-            } else {
-                if (deviceType == 0) {
-                    System.out.println("Установите версию для IOS");
+            }
+
+
+            public static int calculateDeliveryDays ( int distance){
+                if (distance < 20) {
+                    return 1;
+                } else if (distance < 60) {
+                    return 2;
+                } else if (distance < 100) {
+                    return 3;
+                }
+                return -1;
+            }
+            public static void printDeliveryDays ( int days){
+                if (days >= 0) {
+                    System.out.println("Доставка займет" + days + "дней");
                 } else {
-                    System.out.println("Установите версию для Android");
-
+                    System.out.println("Доставки нет");
                 }
-
             }
-        }
-
-        public static int calculateDeliveryDays ( int distance){
-            if (distance < 20) {
-                return 1;
-            } else if (distance < 60) {
-                return 2;
-            } else if (distance < 100) {
-                return 3;
-            }
-            return -1;
-        }
-        public static void printDeliveryDays ( int days){
-            if (days >= 0) {
-                System.out.println("Доставка займет" + days + "дней");
-            } else {
-                System.out.println("Доставки нет");
-            }
-        }
 
 
 
