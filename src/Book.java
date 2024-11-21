@@ -1,11 +1,9 @@
-import java.awt.print.Book;
-
-public class book {
+public class Book {
     private String name;
     public int publicationYear;
     private Author author;
 
-    public book(String name, int publicationYear, Author author) {
+    public Book(String name, int publicationYear, Author author) {
         this.name = name;
         this.publicationYear = publicationYear;
         this.author = author;
@@ -30,5 +28,8 @@ public class book {
     @Override
     public String toString() {
         return name + "(" + publicationYear + ")" + author.toString();
+    }
+
+    public void main() {
     }
 }
