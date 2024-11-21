@@ -10,22 +10,25 @@ public class book {
         this.publicationYear = publicationYear;
         this.author = author;
     }
-    public String getName(){
+
+    public String getName() {
         return this.name;
     }
-    public int  getPublicationYear(){
+
+    public int getPublicationYear() {
         return this.publicationYear;
     }
 
     public Author getAuthor() {
         return author;
     }
-    public void setPublicationYear(int publicationYear){
-        this.publicationYear=publicationYear;
+
+    public void setPublicationYear(int publicationYear) {
+        this.publicationYear = publicationYear;
     }
 
     @Override
     public String toString() {
-        return name+"("+publicationYear+")"+author.toString();
+        return name + "(" + publicationYear + ")" + author.toString();
     }
 }
